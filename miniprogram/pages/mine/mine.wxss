@@ -1,0 +1,49 @@
+page {
+  background: var(--globalBgColor2);
+}
+
+.head {
+  padding: 50rpx 30rpx;
+}
+
+.head .top {
+  background: var(--globalBgColor1);
+  display: flex;
+  align-items: center;
+  padding: 50rpx;
+  border-radius: 30rpx;
+}
+
+.head .top .defaultImg {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.head .top .right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+
+.head .top .right .username {
+  margin-bottom: 20rpx;
+  color: var(--globalColor);
+}
+
+.head .top .right .sign {
+  color: var(--greyColor);
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: nowrap;
+  width: 350rpx;
+}
+
+.head .top .personal {
+  font-size: 27rpx;
+  color: var(--greyColor);
+  margin-top: -62rpx;
+  margin-left: 50rpx;
+}

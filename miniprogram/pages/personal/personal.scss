@@ -1,0 +1,17 @@
+page{
+  background: var(--globalBgColor2);
+}
+#userInfo{
+  padding:50rpx 30rpx;
+  .head{
+    .userImg{
+      height: 240rpx;
+      width: 240rpx;
+      border-radius: 50%;
+      margin:auto 32%;
+    }
+  }
+  .van{
+    margin-top: 20rpx;
+  }
+}

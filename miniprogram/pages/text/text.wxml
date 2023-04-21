@@ -1,0 +1,7 @@
+<view class="body">
+  <view class="title">
+    练习
+  </view>
+  <van-button type="info" class="btn" bindtap="toAnswer" custom-style="width:700rpx; height:100rpx; line-height:2.1;">去答题</van-button>
+  <van-button type="primary" bindtap="toRank"  class="btn" custom-style="width:700rpx;height:100rpx; line-height:2.1;">排行榜</van-button>
+</view>

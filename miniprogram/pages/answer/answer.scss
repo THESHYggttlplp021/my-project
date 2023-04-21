@@ -1,0 +1,41 @@
+.title1{
+  margin: 30rpx auto;
+  border:1px dashed #000;
+  padding:20rpx 60rpx;
+  width: 100%;
+  text-align: left;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+.title2{
+  margin: 30rpx auto;
+  border:1px dashed #000;
+  padding:20rpx 60rpx;
+  width: 100%;
+  text-align: left;
+  font-size: 40rpx;
+  color:#f00;
+  font-weight: 700;
+}
+.options{
+  font-size: 35rpx;
+  margin:80rpx 80rpx;
+  .option-item{
+    background: #ccc;
+    margin-bottom: 20rpx;
+    padding:20rpx 40rpx;
+  }
+}
+
+.success{
+  background: lightgreen !important;
+  color:white;
+}
+.fail{
+  background: lightcoral !important;
+  color:white;
+}
+
+.pro{
+  margin:20rpx;
+}

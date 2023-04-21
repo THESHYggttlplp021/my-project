@@ -1,0 +1,1 @@
+"D:\微信web开发者工具\cli.bat" cloud functions deploy --e turing-5gubqv7a09691a78 --n quickstartFunctions --r --project "C:\Users\86152\Desktop\毕业设计" --report_first --report

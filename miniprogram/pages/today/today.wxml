@@ -1,0 +1,47 @@
+<Tur-header></Tur-header>
+
+<wxs module="tools" src="../../wxs/tools.wxs"></wxs>
+
+
+<view class="blog" wx:for="{{listArr}}" wx:key="_id">
+  <navigator url="../detail/detail?id={{item._id}}">
+    <view class="top">
+      <image src="{{item.userimg}}" mode="" class="userImg" />
+      <view class="right">
+        <view class="username">{{item.username}}</view>
+        <view class="createTime">{{tools.getTime(item._createTime)}}</view>
+      </view>
+    </view>
+
+    <view class="body">
+      <view class="content">
+        <rich-text 
+        nodes="<div style='overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;'>{{item.content}}</div>" 
+        />
+      </view>
+      <image src="{{item}}" mode="" class="pic" wx:for="{{item.pic}}" wx:key="_id" />
+    </view>
+
+    <view class="type" wx:for="{{item.type}}" wx:key="_id">
+      <view class="typeItem">{{item}}</view>
+    </view>
+
+    <view class="bottom">
+      <view class="like">
+        <van-icon name="good-job-o" class="icon" />
+        10
+      </view>
+      <view class="feedback">回复 10</view>
+      <view class="look" wx:if="{{item.readnum}}">浏览 {{tools.getNumber(item.readnum)}}</view>
+    </view>
+  </navigator>
+</view>
+
+
+
+<view class="loading">
+  <van-loading size="24px" color="#1989fa" type="{{loading ? 'spinner' : 'none'}}">
+    <view wx:if="{{loading}}">加载中...</view>
+    <view wx:else>没有更多~</view>
+  </van-loading>
+</view>

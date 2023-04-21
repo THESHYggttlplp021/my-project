@@ -1,0 +1,54 @@
+.body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:50rpx 30rpx;
+}
+.title{
+  font-size: 50rpx;
+  font-weight: 700;
+}
+.rank-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rank{
+  width: 100%;
+  background: lightgreen;
+  border-radius: 25rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding:50rpx 80rpx;
+  margin-top: 30rpx;
+  box-shadow: 10rpx 20rpx 10rpx;
+}
+.avatarUrl{
+  height: 80rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  margin-left: -20rpx;
+}
+.nickName{
+  margin-left: 30rpx;
+  font-size: 32rpx;
+  max-width: 250rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.num{ 
+  margin-left: 30rpx;
+  font-size: 32rpx;
+}
+.rank-top{
+  display: flex;
+  align-items: center;
+}
+
+.rank-bottom{
+  text-align: right;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,15 @@
+<view class="header">
+  <navigator url="" class="logo">
+    <image src="../../images/Logo.png" mode="heightFix" class="pic"/>
+  </navigator>
+
+  <navigator url="" class="search">
+    <van-icon name="search" size="60rpx" color="#BDA066" />
+    
+  </navigator>
+
+  <navigator url="" class="sign">
+    <van-icon name="sign" size="60rpx" color="#BDA066" />
+    <view class="text">打卡</view>
+  </navigator >
+</view> 

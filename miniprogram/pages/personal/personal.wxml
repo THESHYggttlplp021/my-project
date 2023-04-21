@@ -1,0 +1,16 @@
+<view id="userInfo">
+  <view class="head">
+    <image src="{{showAvatarUrl}}" class="userImg" bindtap="chooseImg" mode=""/>
+  </view>
+  
+  <van-cell-group class="van">
+    <van-field
+      label="昵称"
+      model:value="{{ nickName }}"
+      placeholder="请输入昵称"
+    />
+  </van-cell-group>
+
+  <van-button type="default" bindtap="submit" block round color="#BDA666" custom-style="margin-top:30rpx;">确认修改</van-button>
+
+</view>

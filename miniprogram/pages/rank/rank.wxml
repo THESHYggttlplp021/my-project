@@ -1,0 +1,17 @@
+<wxs module="tools" src="../../wxs/tools.wxs"></wxs>
+
+<view class="body">
+  <view class="title">排行榜</view>
+  <view class="rank-list">
+    <view class="rank" wx:for="{{rankList}}" wx:key="index">
+      <view class="rank-top">
+        <image src="{{item.avatarUrl}}" class="avatarUrl" mode=""/>
+        <text class="nickName">{{item.nickName}}</text>
+        <text class="num">共答对{{item.num}}道题</text>
+      </view>
+      <view class="rank-bottom">
+        答题时间：{{tools.getTime(item.time)}}
+      </view>
+    </view>
+  </view>
+</view>

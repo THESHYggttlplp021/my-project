@@ -1,0 +1,163 @@
+page{
+  background: var(--lightColor);
+}
+.box{
+  background: white;
+  padding:50rpx 30rpx;
+  .title{
+    font-size: 36rpx;
+    font-weight:600; 
+  }
+  .top{
+    margin-top: 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .userimg{
+      width: 70rpx;
+      height: 70rpx;
+      border-radius: 50%;
+    }
+    .right{
+      margin-left: 20rpx;
+      .username{
+        font-size: 28rpx;
+        color:var(--globalColor);
+      }
+      .readnum, .time{
+        font-size: 26rpx;
+        color:var(--descColor);
+      }
+    }
+  }
+  .type{
+    display: inline-block;
+    margin-top: 30rpx;
+    margin-left: 10rpx;
+    padding:5rpx 10rpx;
+    background: var(--globalBgColor1);
+    color:var(--descColor);
+    width: 150rpx;
+    text-align: center;
+    border-radius: 50rpx;
+  }
+  .type:first-child{
+    margin-left: -10;
+  }
+  .content{
+    align-items: center;
+    margin-top: 30rpx;
+    .letter{
+      color:var(--globalColor);
+      width: 650rpx;
+    }
+    .conimg{
+      margin-top: 30rpx;
+    }
+  }
+}
+
+.comtitle{
+  background: white;
+  padding:30rpx 30rpx;
+  margin-top: 20rpx;
+  font-size:34rpx;
+  font-weight: 600;
+}
+
+.common{
+  padding:50rpx 30rpx;
+  background: white;
+  margin-bottom: 10rpx;
+  .comTop{
+    display: flex;
+    align-items: center;
+    .comUserImg{
+      width: 70rpx;
+      height: 70rpx;
+      border-radius: 50%;
+    }
+    .comRight{
+      margin-left: 20rpx;
+      .comUsername{
+        font-size: 28rpx;
+        color:var(--focusColor);
+      }
+      .comTime{
+        font-size: 26rpx;
+        color:var(--subColor);
+      }
+    }
+  }
+  .comContent{
+    margin-top: 20rpx;
+    color:var(--globalColor);
+  }
+  .bottom{
+    margin-top: 20rpx;
+    margin-left: -70rpx;
+    display: flex;
+    justify-content: space-around;
+    color:var(--subColor);
+    font-size: 26rpx;
+    .like{
+      .vanicon{
+        background: rgb(101, 207, 101);
+        padding:5rpx;
+        border-radius: 50%;
+        color:white;
+      }
+    }
+  }
+  .line{
+    border-bottom:1rpx solid var(--lightColor);
+    width: 750rpx;
+    margin-left: -30rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+  }
+  .menu{
+    display: flex;
+    justify-content: space-around;
+    font-size: 44rpx;
+    color:var(--greyColor);
+    margin-top: 30rpx;
+    margin-bottom: -20rpx;
+    align-items: center;
+  }
+}
+
+.bottom-menu{
+  background: white;
+  position: fixed;
+  z-index: 10;
+  top:1110rpx;
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  padding:10rpx 30rpx;
+  .menu-icon, .menu-btn{
+    position: relative;
+    top:-60rpx;
+  }
+  .menu-icon{
+    margin-left: 30rpx;
+    font-size: 30rpx;
+    color:var(--greyColor);
+  }
+  .menu-icon:first-child{
+    margin-left: 0;
+  }
+  .bottom-icon{
+    font-size: 36rpx;
+  }
+  .menu-btn{
+    width: 380rpx;
+    height: 50rpx;
+    border-radius: 50rpx;
+    border:none;
+    margin-left: 20rpx;
+    background: var(--globalBgColor1);
+  }
+}

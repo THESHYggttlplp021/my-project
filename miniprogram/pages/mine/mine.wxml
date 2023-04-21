@@ -1,0 +1,72 @@
+<view class="head">
+  <view wx:if="{{!userInfo}}" class="top">
+    <image src="../../images/v2-6afa72220d29f045c15217aa6b275808_hd.png" class="defaultImg" mode=""/>
+    <view class="right" bindtap="login">
+      登陆 / 注册
+    </view>
+  </view>
+  <navigator url="../personal/personal" wx:else class="top">
+    <image src="{{userInfo.avatarUrl}}" class="defaultImg" mode=""/>
+    <view class="right">
+      <view class="username">{{userInfo.nickName}}</view>
+      <view class="sign">{{userInfo.sign}}</view>
+    </view>
+  </navigator>
+</view>
+
+
+<van-cell
+  is-link
+  title="会员详情"
+  link-type="navigateTo"
+  url="/pages/dashboard/index"
+  border="{{true}}"
+  size="large"
+/>
+
+<van-cell
+  is-link
+  title="个人首页"
+  link-type="navigateTo"
+  url="/pages/dashboard/index"
+  border="{{true}}"
+  size="large"
+/>
+
+<van-cell
+  is-link
+  title="我的错题 {{userInfo.record}}"
+  link-type="navigateTo"
+  url="../errorOption/errorOption"
+  border="{{true}}"
+  size="large"
+/>
+
+<van-cell
+  is-link
+  title="我的积分 {{userInfo.goal}}"
+  link-type="navigateTo"
+  url="/pages/dashboard/index"
+  border="{{true}}"
+  size="large"
+/>
+
+<van-cell
+  is-link
+  title="我的余额 {{userInfo.money}}"
+  link-type="navigateTo"
+  url="/pages/dashboard/index"
+  border="{{true}}"
+  size="large"
+/>
+
+<van-cell
+  is-link
+  title="设置"
+  link-type="navigateTo"
+  url="/pages/dashboard/index"
+  border="{{true}}"
+  size="large"
+/>
+
+<van-button wx:if="{{userInfo}}" custom-style="margin-top:50rpx;" round type="info" color="#333" class="exit" size="large" bindtap="exit" block>退出登陆</van-button>

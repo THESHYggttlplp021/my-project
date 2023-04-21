@@ -1,0 +1,164 @@
+<Tur-header></Tur-header>
+
+<view class="banner">
+  <swiper
+  previous-margin="30rpx"
+  circular
+  autoplay
+  interval="3000"
+  indicator-dots
+  indicator-color="#fff"
+  indicator-active-color="#555"
+  >
+    <swiper-item  wx:for="{{dataList}}" wx:key="_id">
+      <image src="{{item.pic}}" mode=""/>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="scrollNav">
+  <view class="more">
+    <view class="title">热门读物</view>
+    <navigator url="" class="readMore">查看更多<text class="gt">></text></navigator>
+  </view>
+  <scroll-view scroll-x>
+    <navigator url="" class="item" wx:for="{{dataList}}" wx:key="{{item._id}}">
+      <view class="pic">
+        <image src="{{item.pic}}" mode=""/>
+      </view>
+      <view class="text">
+        {{item.title}}
+      </view>
+      <view class="sign">
+        <view class="type" wx:for="{{item.type}}">{{item}}</view>
+      </view>
+    </navigator>
+  </scroll-view>
+</view>
+
+<view class="scrollNav">
+  <view class="more">
+    <view class="title">会员专享</view>
+    <navigator url="" class="readMore">查看更多<text class="gt">></text></navigator>
+  </view>
+  <scroll-view scroll-x>
+    <navigator url="" class="item" wx:for="{{VIPlist}}" wx:key="{{item._id}}">
+      <view class="pic">
+        <view class="zhuanxiang">专享</view>
+        <image src="{{item.pic}}" mode=""/>
+      </view>
+      <view class="text">
+        {{item.title}}
+      </view>
+      <view class="sign">
+        <view class="type">{{item.type}}</view>
+      </view>
+    </navigator>
+  </scroll-view>
+  
+</view>
+
+<view class="scrollNav">
+  <view class="more">
+    <view class="title">求职突破</view>
+    <navigator url="" class="readMore">查看更多<text class="gt">></text></navigator>
+  </view>
+  <scroll-view scroll-x>
+    <navigator url="" class="item" wx:for="{{workList}}" wx:key="{{item._id}}">
+      <view class="pic">
+        <image src="{{item.pic}}" mode=""/>
+      </view>
+      <view class="text">
+        {{item.title}}
+      </view>
+      <view class="sign">
+        <view class="type">{{item.type}}</view>
+      </view>
+    </navigator>
+  </scroll-view>
+  
+</view>
+
+<view class="scrollNav">
+  <view class="more">
+    <view class="title">算法专项</view>
+    <navigator url="" class="readMore">查看更多<text class="gt">></text></navigator>
+  </view>
+  <scroll-view scroll-x>
+    <navigator url="" class="item" wx:for="{{suanfaList}}" wx:key="{{item._id}}">
+      <view class="pic">
+        <image src="{{item.pic}}" mode=""/>
+      </view>
+      <view class="text">
+        {{item.title}}
+      </view>
+      <view class="sign">
+        <view class="type">{{item.type}}</view>
+      </view>
+    </navigator>
+  </scroll-view>
+  
+</view>
+
+<view class="scrollNav">
+  <view class="more">
+    <view class="title">八股文</view>
+    <navigator url="" class="readMore">查看更多<text class="gt">></text></navigator>
+  </view>
+  <scroll-view scroll-x>
+    <navigator url="" class="item" wx:for="{{baguwenList}}" wx:key="{{item._id}}">
+      <view class="pic">
+        <image src="{{item.pic}}" mode=""/>
+      </view>
+      <view class="text">
+        {{item.title}}
+      </view>
+      <view class="sign">
+        <view class="type">{{item.type}}</view>
+      </view>
+    </navigator>
+  </scroll-view>
+  
+</view>
+
+<view class="scrollNav">
+  <view class="more">
+    <view class="title">综合提升</view>
+    <navigator url="" class="readMore">查看更多<text class="gt">></text></navigator>
+  </view>
+  <scroll-view scroll-x>
+    <navigator url="" class="item" wx:for="{{promoteList}}" wx:key="{{item._id}}">
+      <view class="pic">
+        <image src="{{item.pic}}" mode=""/>
+      </view>
+      <view class="text">
+        {{item.title}}
+      </view>
+      <view class="sign">
+        <view class="type">{{item.type}}</view>
+      </view>
+    </navigator>
+  </scroll-view>
+  
+</view>
+
+<view class="scrollNav">
+  <view class="more">
+    <view class="title">品质书籍</view>
+    <navigator url="" class="readMore">查看更多<text class="gt">></text></navigator>
+  </view>
+  <scroll-view scroll-x>
+    <navigator url="" class="item" wx:for="{{qualiList}}" wx:key="{{item._id}}">
+      <view class="pic">
+        <image src="{{item.pic}}" mode=""/>
+      </view>
+      <view class="text">
+        {{item.title}}
+      </view>
+      <view class="sign">
+        <view class="type">{{item.type}}</view>
+      </view>
+    </navigator>
+  </scroll-view>
+</view>
+

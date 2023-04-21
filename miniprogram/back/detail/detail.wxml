@@ -1,0 +1,110 @@
+<wxs module="tools" src="../../wxs/tools.wxs"></wxs>
+
+<view class="box">
+  <view class="title">{{detail.title}}</view>
+  
+  <view class="top">
+    <image src="{{detail.userimg}}" mode="" class="userimg"/>
+    <view class="right">
+      <view class="username">{{detail.username}}</view>
+      <text class="readnum" wx:if="{{detail.readnum}}">{{tools.getNumber(detail.readnum)}} 阅读 · </text>
+      <text class="time">{{tools.getTime(detail._createTime)}}</text>
+    </view>
+  </view>
+
+  <view class="type" wx:for="{{detail.type}}" wx:key="index">{{item}}</view>
+
+  <view class="content">
+    <view class="letter">
+      <rich-text nodes="{{detail.content}}"/>
+    </view>
+    <view class="conimg">
+      <image src="{{item}}" mode="" wx:if="{{detail.pic}}" wx:for="{{detail.pic}}" wx:key="index"/>
+    </view>
+  </view>
+</view>
+
+<view class="comtitle">
+    10条评论
+</view>
+
+<view class="common">
+  <view class="comTop">
+    <image src="../../images/banner3.jpg" mode="" class="comUserImg"/>
+    <view class="comRight">
+      <view class="comUsername">風</view>
+      <view class="comTime">04-07</view>
+    </view>
+  </view>
+
+  <view class="comContent">
+    评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+  </view>
+
+  <view class="bottom">
+    <view class="like">
+      <van-icon name="good-job-o" size="30rpx" class="vanicon" />
+      <text class="likenum">    10</text>
+    </view>
+    <text class="recall">回复 6 · </text>
+    <text class="reTime">发布于 04-08</text>
+  </view>
+
+  <view class="line"></view>
+
+  <view class="menu">
+    <van-icon name="good-job-o" class="bottom-icon" />
+    <van-icon name="comment-o" class="bottom-icon" />
+    <van-icon name="star-o" class="bottom-icon" />
+  </view>
+</view>
+
+<view class="common">
+  <view class="comTop">
+    <image src="../../images/banner3.jpg" mode="" class="comUserImg"/>
+    <view class="comRight">
+      <view class="comUsername">風</view>
+      <view class="comTime">04-07</view>
+    </view>
+  </view>
+
+  <view class="comContent">
+    评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+  </view>
+
+  <view class="bottom">
+    <view class="like">
+      <van-icon name="good-job-o" size="30rpx" class="vanicon" />
+      <text class="likenum">    10</text>
+    </view>
+    <text class="recall">回复 6 · </text>
+    <text class="reTime">发布于 04-08</text>
+  </view>
+
+  <view class="line"></view>
+
+  <view class="menu">
+    <van-icon name="good-job-o" class="bottom-icon" />
+    <van-icon name="comment-o" class="bottom-icon" />
+    <van-icon name="star-o" class="bottom-icon" />
+  </view>
+</view>
+
+<view class="bottom-menu">
+  <view class="menu-icon">
+    <van-icon name="good-job-o" class="bottom-icon" />
+     6
+  </view>
+  
+  <view class="menu-icon">
+    <van-icon name="star-o" class="bottom-icon" />
+     7
+  </view>
+  <view class="menu-icon">  
+    <van-icon name="share-o" class="bottom-icon" />
+    分享
+  </view>
+  
+  <input type="text" placeholder="    说点什么吧..." disabled="true" class="menu-btn"/>
+  
+</view>

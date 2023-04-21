@@ -1,0 +1,104 @@
+page {
+  background: var(--globalBgColor1);
+}
+
+.blog {
+  padding: 30rpx 50rpx;
+  background: white;
+  margin-bottom: 15rpx;
+}
+
+.blog .top {
+  display: flex;
+  align-items: center;
+}
+
+.blog .top .userImg {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+
+.blog .top .right {
+  margin-left: 20rpx;
+}
+
+.blog .top .right .username {
+  color: var(--globalColor);
+  font-weight: 600;
+}
+
+.blog .top .right .createTime {
+  color: var(--subColor);
+  font-size: 26rpx;
+  margin-top: 5rpx;
+}
+
+.blog .body {
+  margin-top: 30rpx;
+}
+
+.blog .body .pic {
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  height: 200rpx;
+  width: 300rpx;
+}
+
+.blog .type {
+  margin-top: 30rpx;
+  display: flex;
+}
+
+.blog .type .typeItem {
+  display: inline-block;
+  margin-left: 20rpx;
+  background: var(--lightColor);
+  padding: 5rpx 10rpx;
+  font-size: 28rpx;
+  border-radius: 50rpx;
+  width: 150rpx;
+  text-align: center;
+  color: var(--descColor);
+}
+
+.blog .type .typeItem:first-child {
+  margin-left: 0;
+}
+
+.blog .bottom {
+  display: flex;
+  margin-top: 30rpx;
+}
+
+.blog .bottom .like {
+  font-size: 28rpx;
+  color: var(--descColor);
+}
+
+.blog .bottom .like .icon {
+  background: #62ca62;
+  font-size: 36rpx;
+  border-radius: 50%;
+  padding: 5rpx;
+  color: white;
+}
+
+.blog .bottom .feedback {
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+  color: var(--descColor);
+}
+
+.blog .bottom .look {
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+  color: var(--descColor);
+}
+
+.blog .loading {
+  text-align: center;
+  padding: 30rpx 0;
+}

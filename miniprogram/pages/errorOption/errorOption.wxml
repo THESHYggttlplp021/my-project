@@ -1,0 +1,27 @@
+<view class="title1">
+  当前第{{current + 1}}题/共{{list.length}}题
+</view>
+
+<view class="title2">
+  {{ list[current].title }}
+</view>
+
+<view class="options">
+  <view class="option-item" wx:for="{{ list[current].option }}" wx:key="index">
+    {{ optionList[index] }}.{{ item }}
+  </view>
+</view>
+
+<view class="choose">您选择了{{errorItem[current]}}选项</view>
+
+<view class="rightOpt">正确选项：{{list[current].answer}}</view>
+
+<view class="explain">
+  <text class="jiexi">[解析]:</text>
+  <view class="expContent"> 
+    题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容题解内容
+  </view>
+</view>
+
+<button bindtap="last" type="primary" style="width: 500rpx; margin-bottom: 30rpx;">上一题</button>
+<button bindtap="next" type="primary" style="width: 500rpx;">下一题</button>

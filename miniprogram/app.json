@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/today/today",
+    "pages/detail/detail",
+    "pages/mine/mine",
+    "pages/personal/personal",
+    "pages/text/text",
+    "pages/answer/answer",
+    "pages/rank/rank",
+    "pages/errorOption/errorOption"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#BDA066",
+    "navigationBarTitleText": "算法学习小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "Tur-header":"./Components/Tur-header/Tur-header"
+  },
+  "tabBar": {
+    "color": "#4C4D4E",
+    "selectedColor": "#BDA066",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/home.png",
+        "selectedIconPath": "./images/home-fill.png"
+      },
+      {
+        "pagePath": "pages/today/today",
+        "text": "今天",
+        "iconPath": "./images/all.png",
+        "selectedIconPath": "./images/all-fill.png"
+      },
+      {
+        "pagePath": "pages/text/text",
+        "text": "题库",
+        "iconPath": "./images/mine.png",
+        "selectedIconPath": "./images/mine-fill.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./images/mine.png",
+        "selectedIconPath": "./images/mine-fill.png"
+      }
+      
+    ]
+  }
+}
