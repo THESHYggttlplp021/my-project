@@ -1,0 +1,36 @@
+<!--pages/index/index.wxml-->
+<view>
+  <!-- 最顶部样式 -->
+  <view class="top-view">
+    <!-- 头像与昵称 -->
+    <view class="user-info">
+      <!-- 头像 -->
+      <view class="avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <!-- 昵称 -->
+      <view class="nickname">
+        <open-data type="userNickName"></open-data>
+      </view>
+    </view>
+    <!-- 打卡天数统计 -->
+    <view class="day-count">
+      <text>
+        已累计打卡
+      </text>
+      <text class="day-count-num">
+        {{listSize}}
+      </text>
+      <text>
+        天
+      </text>
+    </view>
+  </view>
+  <!-- 底部view -->
+  <view class="bottom-view">
+    <view bindtap="punchTheClock" class="btn_click">
+      <text>{{todayClick?'已打卡':'今日打卡'}}</text>
+    </view>
+    <view bindtap="jumpDetail" class="btn_detail">打卡详情</view>
+  </view>
+</view>

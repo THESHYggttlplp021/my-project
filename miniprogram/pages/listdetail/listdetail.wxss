@@ -1,0 +1,32 @@
+/* pages/listdetail/listdetail.wxss */
+.list-item-view {
+  margin-top: 5rpx;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFF00;
+  align-items: center;
+}
+ 
+.punch-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-date{
+  font-weight: 600;
+  color: #000000;
+}
+.item-status{
+  font-size: 30rpx;
+  color: #FF0000;
+}
+ 
+.view-desc {
+  position: absolute;
+  right: 30rpx;
+}
+.item-line{
+  height: 2rpx;
+  background-color: #2b2a2a;
+}

@@ -71,3 +71,8 @@
 .pro {
   margin: 20rpx;
 }
+
+.noError {
+  margin: 70% 80rpx;
+  font-size: 40rpx;
+}

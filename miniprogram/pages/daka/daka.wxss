@@ -1,0 +1,75 @@
+/* pages/index/index.wxss */
+.top-view {
+  position: relative;
+  width: 100%;
+  height: 280rpx;
+  background-color: #FFFF00;
+}
+ 
+.user-info {
+  left: 50rpx;
+  position: relative;
+  top: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+ 
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+ 
+.nickname {
+  margin-left: 30rpx;
+  font-size: 38rpx;
+  color: #000000;
+}
+ 
+.day-count {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  display: flex;
+}
+ 
+.day-count-num {
+  color: #FF0000;
+}
+ 
+.bottom-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scrollbar-shadow-color: #FF0000;
+}
+ 
+.btn_click {
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #FF0000;
+  display: flex;
+  width: 300rpx;
+  margin-top: 280rpx;
+  box-shadow: 0px 2px 5px 5px #FF0000;
+  align-items: center;
+  justify-content: center;
+  height: 300rpx;
+}
+ 
+.btn_click text {
+  color: #FFFFFF;
+  font-size: 60rpx;
+}
+ 
+.btn_detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45rpx;
+  color: #000000;
+  position: absolute;
+  bottom: 100rpx;
+}

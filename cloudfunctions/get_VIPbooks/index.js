@@ -6,5 +6,7 @@ const db = cloud.database();
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  return await db.collection("VIP").get();
+  return await db.collection("books").where({
+    booktype:"会员专享"
+  }).get();
 }

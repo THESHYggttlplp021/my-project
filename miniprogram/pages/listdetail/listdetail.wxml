@@ -1,0 +1,19 @@
+<!--pages/listdetail/listdetail.wxml-->
+<view>
+ 
+ <!-- 空数据页面 -->
+ <view wx:if="{{isEmpty}}" class="empty-view">
+   <text>你还没有打过卡</text>
+ </view>
+ <block wx:else>
+   <!-- 有数据页面 -->
+   <view class="list-item-view" style="background-color: {{item.status?'#FFFF00':'#FF0000'}}" wx:for="{{punchList}}">
+     <view class="punch-info">
+       <view class="item-date" style="color: {{item.status?'#000000':'#FFFF00'}}">{{item.date}}</view>
+       <view class="item-status" style="color: {{item.status?'#FF0000':'#FFFFFF'}}">{{item.status?'已打卡':'未打卡'}}</view>
+     </view>
+     <view wx:if='{{!item.status||item.desc}}' class="view-desc">注意</view>
+   </view>
+ </block>
+
+</view>

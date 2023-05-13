@@ -65,7 +65,7 @@ Page({
 
   last(){
     let currentNum = this.data.current - 1;
-    if(currentNum < 1){
+    if(currentNum < 0){
       wx.showToast({
         title: '没有上一题',
         icon:"error"

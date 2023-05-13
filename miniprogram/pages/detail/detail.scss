@@ -2,6 +2,50 @@ page{
   background: var(--lightColor);
   z-index: 100;
 }
+
+@keyframes heartBlast{
+  0% {
+    top:0px; 
+  }
+  10% {
+      top:-3px; 
+  }
+  20% {
+      top:-6px; 
+  }
+  30% {
+      top:-9px; 
+  }
+  40% {
+      top:-12px; 
+      transform: rotate(6deg);
+  }
+  50% {
+      top:-15px; 
+      transform: rotate(12deg);
+  }
+  60% {
+      top:-18px; 
+      transform: rotate(6deg);
+  }
+  70% {
+      top:-21px;
+      transform: rotate(0deg);
+  }
+  80% {
+      top:-24px;
+      transform: rotate(-6deg);
+  }
+  90% {
+      top:-27px;
+      transform: rotate(-12deg);
+  }
+  100% {
+      top:-30px;
+      transform: rotate(-6deg);
+  }
+}
+
 .box{
   background: white;
   padding:50rpx 30rpx;
@@ -127,6 +171,40 @@ page{
     margin-bottom: -20rpx;
     align-items: center;
   }
+
+  .replyList{
+    background: var(--lightColor);
+    padding:10rpx 10rpx 30rpx 10rpx;
+    border-radius: 20rpx;
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    .replyBody{
+      margin-top: 30rpx;
+      margin-left: 30rpx;
+      display: flex;
+      align-items: center;
+      .replyPic{
+        width: 60rpx;
+        height: 60rpx;
+        border-radius: 50%;
+      }
+      .replyTop{
+        display: inline-block;
+        margin-left: 30rpx;
+        font-size: 26rpx;
+        color:var(--focusColor);
+        .replyName{
+          margin-bottom: 10rpx;
+        }
+      }
+    }
+    .replyContent{
+      margin-top: 20rpx;
+      margin-left: 30rpx;
+      font-size: 34rpx;
+      color:var(--focusColor);
+    }
+  }
 }
 
 .bottom-menu{
@@ -148,9 +226,17 @@ page{
     font-size: 30rpx;
     color:var(--greyColor);
   }
-  .menu-icon:first-child{
+  .zan{
     margin-left: 0;
   }
+  .zan.active .bottom-icon{
+    animation: heartBlast 1s ease-in-out;
+  }
+
+  .zan.active{
+    color:lightcoral;
+  }
+  
   .bottom-icon{
     font-size: 36rpx;
   }

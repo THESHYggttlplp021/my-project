@@ -1,0 +1,49 @@
+.body{
+  padding:50rpx 30rpx;
+  .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .cancle{
+      font-size: large;
+      color:var(--descColor);
+    }
+  }
+  .titleIn{
+    height: 70rpx;
+  }
+  .uploader{
+    margin-left: 12%;
+  }
+  .imgList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:0 30rpx;
+    .imgBlock{
+      display: flex;
+      flex-direction: row;
+    }
+    .img{
+      width: 200rpx;
+      height: 200rpx;
+      margin-top: 10rpx;
+      margin-left: 10rpx;
+    }
+    .add{
+      background: var(--subColor);
+      padding:30rpx;
+      width: 140rpx;
+      height: 140rpx;
+      text-align: center;
+      margin-top: 10rpx;
+      margin-left: 10rpx;
+      .vanAddImg{
+        font-size: 120rpx;
+        margin-top: 10rpx;
+        color:white;
+      }
+    }
+  }
+}

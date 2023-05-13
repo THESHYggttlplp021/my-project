@@ -6,5 +6,7 @@ const db = cloud.database();
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  return await db.collection("suanfa").get();
+  return await db.collection("books").where({
+    booktype:"算法专项"
+  }).get();
 }

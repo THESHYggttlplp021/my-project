@@ -25,20 +25,38 @@
 </view>
 
 <view class="comtitle">
-    10条评论
+  {{detail.commentList.length}}条评论
 </view>
 
-<view class="common">
+<view class="common" wx:for="{{detail.commentList}}" wx:key="index">
   <view class="comTop">
-    <image src="../../images/banner3.jpg" mode="" class="comUserImg"/>
+    <image src="{{item.avatarUrl}}" mode="" class="comUserImg"/>
     <view class="comRight">
-      <view class="comUsername">風</view>
-      <view class="comTime">04-07</view>
+      <view class="comUsername">{{item.nickName}}</view>
     </view>
   </view>
 
   <view class="comContent">
-    评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+    {{item.comment}}
+  </view>
+
+  <view class="replyList" wx:for="{{item.replyComment}}"> 
+    <view class="replyBody">
+      <image src="{{ item.avatar }}" mode="" class="replyPic"/>
+      <view class="replyTop">
+        <view class="replyName">
+          {{ item.nick }}
+        </view>
+        
+        <view class="time">
+          回复于 {{ tools.getTime(item.time) }}
+        </view>
+      </view>
+    </view>
+    
+    <view class="replyContent">
+      {{ item.reComment }}
+    </view>
   </view>
 
   <view class="bottom">
@@ -46,54 +64,24 @@
       <van-icon name="good-job-o" size="30rpx" class="vanicon" />
       <text class="likenum">    10</text>
     </view>
-    <text class="recall">回复 6 · </text>
-    <text class="reTime">发布于 04-08</text>
+    <text class="recall">回复 {{item.replyComment.length}}  </text>
+    <text class="reTime">发布于 {{tools.getTime(item.createTime)}}</text>
   </view>
 
   <view class="line"></view>
 
   <view class="menu">
     <van-icon name="good-job-o" class="bottom-icon" />
-    <van-icon name="comment-o" class="bottom-icon" />
+    <van-icon name="comment-o" class="bottom-icon" bindtap="replyComment" data-id="{{index}}" />
     <van-icon name="star-o" class="bottom-icon" />
   </view>
 </view>
 
-<view class="common">
-  <view class="comTop">
-    <image src="../../images/banner3.jpg" mode="" class="comUserImg"/>
-    <view class="comRight">
-      <view class="comUsername">風</view>
-      <view class="comTime">04-07</view>
-    </view>
-  </view>
-
-  <view class="comContent">
-    评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
-  </view>
-
-  <view class="bottom">
-    <view class="like">
-      <van-icon name="good-job-o" size="30rpx" class="vanicon" />
-      <text class="likenum">    10</text>
-    </view>
-    <text class="recall">回复 6 · </text>
-    <text class="reTime">发布于 04-08</text>
-  </view>
-
-  <view class="line"></view>
-
-  <view class="menu">
-    <van-icon name="good-job-o" class="bottom-icon" />
-    <van-icon name="comment-o" class="bottom-icon" />
-    <van-icon name="star-o" class="bottom-icon" />
-  </view>
-</view>
 
 <view class="bottom-menu" wx:if="{{show}}">
-  <view class="menu-icon">
+  <view class="menu-icon zan {{likeShow ? 'active' : ''}}" bindtap="clickLike" data-id="{{detail._id}}">
     <van-icon name="good-job-o" class="bottom-icon" />
-    6
+    {{detail.like}}
   </view>
   
   <view class="menu-icon">
@@ -120,9 +108,24 @@
   bind:close="onClose"
   class="popup"
 >
-  <textarea value="" fixed="true" bindfocus="txtFocus" disable-default-padding="{{!show}}" auto-focus="{{!show}}" bindblur="txtBlur" cursor-spacing="300" placeholder="说一说你的想法吧~" class="txt">
+  <textarea value="{{ value }}" fixed="true" bindfocus="txtFocus" disable-default-padding="{{!show}}" auto-focus="{{!show}}" bindblur="txtBlur" cursor-spacing="300" placeholder="说一说你的想法吧~" class="txt" bindinput="getComment">
   </textarea>
   <button class="send" bindtap="send">
+    <van-icon name="guide-o" />
+    发送
+  </button>
+</van-popup>
+
+<van-popup
+  show="{{ showReply }}"
+  position="bottom"
+  custom-style="height: 20%;"
+  bind:close="onClose"
+  class="popup"
+>
+  <textarea value="{{ replyVal }}" fixed="true" bindfocus="txtFocus" disable-default-padding="{{ showReply }}" auto-focus="{{ showReply }}" bindblur="txtBlur" cursor-spacing="300" placeholder="说一说你的想法吧~" class="txt" bindinput="getReplyComment">
+  </textarea>
+  <button class="send" bindtap="replySend">
     <van-icon name="guide-o" />
     发送
   </button>

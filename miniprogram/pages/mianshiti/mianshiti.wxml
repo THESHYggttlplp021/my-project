@@ -1,0 +1,12 @@
+<wxs module="tools" src="../../wxs/tools.wxs"></wxs>
+
+<navigator url="../article/article?id={{item._id}}" class="body" wx:for="{{dataList}}" wx:key="index">
+  <view class="content">
+    <view class="title">{{item.title}}</view>
+    <view class="pic">
+      <image src="{{item.pic}}" mode="aspectFill"/>
+    </view>
+  </view>
+
+  <view class="time">发布于 {{tools.getTime(item._createTime)}}</view>
+</navigator>

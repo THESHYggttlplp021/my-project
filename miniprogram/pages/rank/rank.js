@@ -17,12 +17,13 @@ Page({
   onLoad(options) {
     db.collection("answer").orderBy("num","desc").get({
       success:(res)=>{
-        console.log(res);
         this.setData({
           rankList:res.data
         })
       }
     })
+
+    console.log(this.data.rankList);
   },
 
   /**

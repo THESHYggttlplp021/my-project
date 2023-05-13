@@ -1,0 +1,28 @@
+<form class="body" bindsubmit="submitBlog">
+  <view class="body">
+    <view class="top">
+      <view class="cancle">取消</view>
+      <van-button form-type="submit" type="info" custom-style="background:black; color:white; border-radius:50rpx; padding:0 50rpx; font-size:32rpx;">发布</van-button>
+    </view>
+    <van-divider customStyle="border-color: #8e8e8e;" />
+
+    <view class="title">
+      <input type="text" class="titleIn" name="title" placeholder="请输入标题"/>
+    </view>
+    <van-divider customStyle="border-color: #8e8e8e;" />
+
+    <textarea value="" placeholder="请输入内容" name="content"/>
+
+    <view class="imgList">
+
+      <block class="imgBlock" wx:for="{{imageList}}">
+        <image src="{{item}}" mode="aspectFill" bindtap="preview" data-src="{{item}}" class="img"/>
+      </block>
+      <view class="add" wx:if="{{ ( imageList.length > 9) ? false : true }}">
+        <van-icon name="add-o" class="vanAddImg" bindtap="addImg" />
+      </view>
+
+    </view>
+  </view>
+
+</form>

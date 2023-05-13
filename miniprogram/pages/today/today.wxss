@@ -41,8 +41,8 @@ page {
 .blog .body .pic {
   margin-top: 30rpx;
   margin-left: 20rpx;
-  height: 200rpx;
-  width: 300rpx;
+  height: 150rpx;
+  width: 150rpx;
 }
 
 .blog .type {
@@ -101,4 +101,20 @@ page {
 .blog .loading {
   text-align: center;
   padding: 30rpx 0;
+}
+
+.addBlog {
+  position: fixed;
+  bottom: 20rpx;
+  right: 30rpx;
+}
+
+.addBlog .addImg {
+  width: 70rpx;
+  height: 70rpx;
+  background: #099609;
+  border-radius: 50%;
+  padding: 15rpx;
+  align-items: center;
+  text-align: center;
 }

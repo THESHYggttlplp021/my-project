@@ -1,0 +1,58 @@
+.body {
+  padding: 50rpx 30rpx;
+}
+
+.body .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.body .top .cancle {
+  font-size: large;
+  color: var(--descColor);
+}
+
+.body .titleIn {
+  height: 70rpx;
+}
+
+.body .uploader {
+  margin-left: 12%;
+}
+
+.body .imgList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 30rpx;
+}
+
+.body .imgList .imgBlock {
+  display: flex;
+  flex-direction: row;
+}
+
+.body .imgList .img {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+
+.body .imgList .add {
+  background: var(--subColor);
+  padding: 30rpx;
+  width: 140rpx;
+  height: 140rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+
+.body .imgList .add .vanAddImg {
+  font-size: 120rpx;
+  margin-top: 10rpx;
+  color: white;
+}

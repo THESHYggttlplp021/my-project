@@ -9,7 +9,8 @@
 }
 
 .header .logo {
-  height: 70rpx;
+  height: 90rpx;
+  margin-top: -20rpx;
 }
 
 .header .logo .pic {

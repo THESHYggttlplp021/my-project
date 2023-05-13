@@ -1,0 +1,43 @@
+<view class='productNav'>
+  <!-- 左侧 -->
+  <view class='left'>
+    <view class="{{active==0?'selected':'normal'}}" id="0" bindtap='switchNav'>闲谈</view>
+    <view class="{{active==1?'selected':'normal'}}" id="1" bindtap='switchNav'>数据结构面试题</view>
+    <view class="{{active==2?'selected':'normal'}}" id="2" bindtap='switchNav'>数据结构基础知识</view>
+    <view class="{{active==3?'selected':'normal'}}" id="3" bindtap='switchNav'>有趣的算法题</view>
+  </view>
+  <!-- 右侧 -->
+  <view class='right'>
+    <view class='type'>
+      <!-- current:当前所在滑块的 index -->
+      <!-- vertical:滑动方向是否为纵向 -->
+      <swiper current='{{currentTab}}' vertical='{{true}}'>
+        <!-- catchtouchmove 阻止弹窗后滚动穿透 -->
+        <swiper-item id="0" catchtouchmove="false">
+          <navigator url="" class="xiantan">
+            <image src="../../images/bg.jpg" mode=""/>
+            <view>闲谈</view>
+          </navigator>
+        </swiper-item>
+        <swiper-item id="1" catchtouchmove="false">
+          <navigator url="../mianshiti/mianshiti" class="mianshi">
+            <image src="../../images/bg.jpg" mode=""/>
+            <view>数据结构面试题</view>
+          </navigator>
+        </swiper-item>  
+        <swiper-item id="2" catchtouchmove="false">
+          <navigator url="" class="jichu">
+            <image src="../../images/bg.jpg" mode=""/>
+            <view>数据结构基础知识</view>
+          </navigator>
+        </swiper-item>
+        <swiper-item id="3" catchtouchmove="false">
+          <navigator url="" class="youqu">
+            <image src="../../images/bg.jpg" mode=""/>
+            <view>有趣的算法题</view>
+          </navigator>
+        </swiper-item>
+      </swiper> 
+    </view>
+  </view>
+</view>

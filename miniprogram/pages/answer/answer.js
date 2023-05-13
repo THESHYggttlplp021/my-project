@@ -14,18 +14,7 @@ Page({
   data: {
     select:"",
     status:"",
-    list:[
-      {
-        title:"1 + 1 = ?",
-        option:["1", "2", "3", "4"],
-        answer:"B"
-      },
-      {
-        title:"2 + 2 = ?",
-        option:["4", "5", "6", "7"],
-        answer:"A"
-      }
-    ],
+    list:[],
     answerNow:0,
     optionList:["A", "B", "C", "D"],
     successNum:0,
@@ -42,6 +31,7 @@ Page({
     //3.给用户提示，进行背景色的替换
     //4.跳转下一个题目
     const answer = this.data.list[this.data.answerNow].answer;
+
     if(item === answer){
       //正确
       this.setData({
@@ -83,15 +73,17 @@ Page({
           //数据库中有没有当前用户的答题记录。有则判断本次答对数量是否大于数据库中的，是则替换，否则添加
           const openid = wx.getStorageSync("openid");
           db.collection("answer").where({
-            _openid:openid
+            _openid:openid,
           }).get({
             success:(res)=>{
               const { data } = res;
+              
               if(data.length > 0){
                 if(data[0].num < num){
                   db.collection("answer").doc(data[0]._id).update({
                     data:{
                       num,
+                      avatarUrl
                     }
                   });
                 }
@@ -137,7 +129,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    
 
+    wx.cloud.callFunction({
+      name: "get_dataStruct",
+    }).then(res => {
+      
+      this.setData({
+        list:res.result.data
+      })
+    })
   },
 
   /**

@@ -1,0 +1,34 @@
+<view class="body">
+
+  <view class="top">
+    <image src="{{dataList.pic}}" mode="" class="pic"/>
+
+    <view class="left">
+      <view class="title">{{dataList.title}}</view>
+      <rich-text nodes="{{dataList.content}}" class="content"/>
+      <view class="typeList">
+        <view class="type" wx:for="{{dataList.type}}">{{item}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="profile-item">
+    <text class="profile-title">· 概述</text>
+    <view class="profile">{{dataList.profile}}</view>
+  </view>
+
+  <view class="profile-item">
+    <text class="profile-title">· 适合人群</text>
+    <view class="profile">
+      <view class="item">{{dataList.suitable}}</view>
+    </view>
+  </view>
+
+  <view class="profile-item">
+    <text class="profile-title">·   学习目标</text>
+    <view class="profile">
+      <view>{{dataList.goal}}</view>
+    </view>
+  </view>
+
+</view>

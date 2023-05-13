@@ -1,0 +1,51 @@
+.body{
+  padding:50rpx 30rpx;
+  .top{
+    display: flex;
+    justify-content: space-between;
+    .pic{
+      width: 850rpx;
+      height: 350rpx;
+      border-radius: 20rpx;
+    }
+    .left{
+      margin-left: 30rpx;
+      .title{
+        font-size: 32rpx;
+        margin-bottom: 20rpx;
+      }
+      .content{
+        font-size: 32rpx;
+      }
+      .typeList{
+        margin-top: 20rpx;
+        display: flex;
+        .type{
+          margin-right: 20rpx;
+          background: var(--greyColor);
+          border-radius: 50rpx;
+          padding:5rpx 10rpx;
+          color:white;
+          text-align: center;
+        }
+      }
+      
+    }
+  }
+  .profile-item{
+    margin-top: 50rpx;
+    box-shadow: 15rpx 15rpx 15rpx 15rpx #777;
+    padding:20rpx;
+    border-radius: 20rpx;
+    .profile-title{
+      font-size: 50rpx;
+      font-weight: 600;
+    }
+    .profile{
+      margin-top: 30rpx;
+      font-size: 34rpx;
+      line-height: 1.5em;
+      color:var(--focusColor);
+    }
+  }
+}

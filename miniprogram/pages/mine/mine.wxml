@@ -35,7 +35,7 @@
 
 <van-cell
   is-link
-  title="我的错题 {{userInfo.record}}"
+  title="我的错题 {{(record > 0) ? record : ''}}"
   link-type="navigateTo"
   url="../errorOption/errorOption"
   border="{{true}}"

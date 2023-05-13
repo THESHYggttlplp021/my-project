@@ -19,7 +19,7 @@
         nodes="<div style='overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;'>{{item.content}}</div>" 
         />
       </view>
-      <image src="{{item}}" mode="" class="pic" wx:for="{{item.pic}}" wx:key="_id" />
+      <image src="{{item}}" mode="" class="pic" wx:for="{{item.pic}}" wx:key="index" />
     </view>
 
     <view class="type" wx:for="{{item.type}}" wx:key="_id">
@@ -27,17 +27,15 @@
     </view>
 
     <view class="bottom">
-      <view class="like">
+      <view class="like" wx:if="{{listArr[index].like}}">
         <van-icon name="good-job-o" class="icon" />
-        10
+        {{listArr[index].like}}
       </view>
-      <view class="feedback">回复 10</view>
+      <view class="feedback">回复 {{item.commentList.length}}</view>
       <view class="look" wx:if="{{item.readnum}}">浏览 {{tools.getNumber(item.readnum)}}</view>
     </view>
   </navigator>
 </view>
-
-
 
 <view class="loading">
   <van-loading size="24px" color="#1989fa" type="{{loading ? 'spinner' : 'none'}}">
@@ -45,3 +43,7 @@
     <view wx:else>没有更多~</view>
   </van-loading>
 </view>
+
+<navigator url="../fatie/fatie" class="addBlog">
+  <image src="../../images/addBlog.png" mode="" class="addImg"/>
+</navigator>

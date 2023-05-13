@@ -8,7 +8,7 @@ const db = cloud.database();
 exports.main = async (event, context) => {
   let size = event.size;
   return await db.collection("blog")
-  .orderBy("_createTime", "asc")
+  .orderBy("_createTime", "desc")
   .limit(5)
   .skip(size)
   .get();

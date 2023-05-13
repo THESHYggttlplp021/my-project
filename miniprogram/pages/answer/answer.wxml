@@ -8,6 +8,10 @@
 
 <view class="options">
   <view class="option-item {{ select === optionList[index] ? status : '' }}" bindtap="selector" data-item="{{ optionList[index] }}" wx:for="{{ list[answerNow].option }}" wx:key="index">
-    {{ optionList[index] }}.{{ item }}
+    {{ optionList[index] }}.{{ list[answerNow].option[index] }}
   </view>
+</view>
+
+<view>
+  {{}}
 </view>

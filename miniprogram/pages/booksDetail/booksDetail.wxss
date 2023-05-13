@@ -1,0 +1,60 @@
+.body {
+  padding: 50rpx 30rpx;
+}
+
+.body .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.body .top .pic {
+  width: 850rpx;
+  height: 350rpx;
+  border-radius: 20rpx;
+}
+
+.body .top .left {
+  margin-left: 30rpx;
+}
+
+.body .top .left .title {
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.body .top .left .content {
+  font-size: 32rpx;
+}
+
+.body .top .left .typeList {
+  margin-top: 20rpx;
+  display: flex;
+}
+
+.body .top .left .typeList .type {
+  margin-right: 20rpx;
+  background: var(--greyColor);
+  border-radius: 50rpx;
+  padding: 5rpx 10rpx;
+  color: white;
+  text-align: center;
+}
+
+.body .profile-item {
+  margin-top: 50rpx;
+  box-shadow: 15rpx 15rpx 15rpx 15rpx #777;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+
+.body .profile-item .profile-title {
+  font-size: 50rpx;
+  font-weight: 600;
+}
+
+.body .profile-item .profile {
+  margin-top: 30rpx;
+  font-size: 34rpx;
+  line-height: 1.5em;
+  color: var(--focusColor);
+}

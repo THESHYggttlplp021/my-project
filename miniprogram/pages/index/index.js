@@ -10,7 +10,8 @@ Page({
     suanfaList:[],
     baguwenList:[],
     promoteList:[],
-    qualiList:[]
+    qualiList:[],
+    swiper:[]
   },
 
   /**
@@ -24,6 +25,17 @@ Page({
     this.getBaguwen();
     this.getPromote();
     this.getQual();
+    this.getSwiper();
+  },
+
+  getSwiper(){
+    wx.cloud.callFunction({
+      name:"get_Swiper"
+    }).then(res=>{
+      this.setData({
+        swiper:res.result.data
+      })
+    })
   },
 
   //获取热门书籍数据
@@ -53,7 +65,7 @@ Page({
     wx.cloud.callFunction({
       name:"get_Work"
     }).then(res=>{
-      console.log(res);
+      
       this.setData({
         workList:res.result.data
       })
@@ -65,7 +77,6 @@ Page({
     wx.cloud.callFunction({
       name:"get_Suanfa"
     }).then(res=>{
-      console.log(res);
       this.setData({
         suanfaList:res.result.data
       })
@@ -77,7 +88,7 @@ Page({
     wx.cloud.callFunction({
       name:"get_Baguwen"
     }).then(res=>{
-      console.log(res);
+      
       this.setData({
         baguwenList:res.result.data
       })
@@ -89,7 +100,7 @@ Page({
     wx.cloud.callFunction({
       name:"get_Promote"
     }).then(res=>{
-      console.log(res);
+      
       this.setData({
         promoteList:res.result.data
       })
@@ -101,7 +112,7 @@ Page({
     wx.cloud.callFunction({
       name:"get_Qual"
     }).then(res=>{
-      console.log(res);
+      
       this.setData({
         qualiList:res.result.data
       })

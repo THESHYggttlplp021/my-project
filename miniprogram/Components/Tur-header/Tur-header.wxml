@@ -8,7 +8,7 @@
     
   </navigator>
 
-  <navigator url="" class="sign">
+  <navigator url="../../pages/daka/daka" class="sign">
     <van-icon name="sign" size="60rpx" color="#BDA066" />
     <view class="text">打卡</view>
   </navigator >

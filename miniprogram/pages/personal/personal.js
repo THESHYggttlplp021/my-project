@@ -1,123 +1,114 @@
-Page({
+const db = wx.cloud.database();
+let id;
 
-  /**
-   * 页面的初始数据
-   */
+Page({
   data: {
-    userId:'',
-    showAvatarUrl:'',
-    avatarUrl:'',
-    nickName:''
+    userId: '',
+    showAvatarUrl: '',
+    fileID: '',
+    nickName: ''
   },
 
-  //获取用户信息
+  /* 获取用户信息 */
   async getUserInfo(){
-    const { data } = await wx.cloud.database().collection("userinfo").doc(this.data.userId).get();
+    const { data } = await wx.cloud.database().collection('userinfo').doc(this.data.userId).get()
     this.setData({
-      showAvatarUrl:data.avatarUrl,
-      avatarUrl:data.avatarUrl,
-      nickName:data.nickName
+      showAvatarUrl: data.avatarUrl,
+      fileID: data.avatarUrl,
+      nickName: data.nickName
     })
   },
 
-  //修改用户信息
+  /* 选择头像 */
+  async chooseImg(){
+    const { tempFiles } = await wx.chooseMedia({
+      count: 1,
+      mediaType: ['image'],
+      sourceType: ['album', 'camera'],
+      sizeType:["original", "compressed"]
+    })
+
+    this.setData({
+      showAvatarUrl: tempFiles[0].tempFilePath
+    })
+  },
+
+  /* 修改信息 */
   async submit(){
-    const { nickName, userId, avatarUrl, showAvatarUrl } = this.data;
-    let bufferAvatarUrl = '';
+    const that = this;
+    const { nickName, userId, fileID, showAvatarUrl } = this.data;
+    let bufferAvatarUrl = ''
     wx.showLoading({
       title: '修改中...',
     })
 
-    if(avatarUrl !== showAvatarUrl){
-      bufferAvatarUrl = wx.getFileSystemManager().readFileSync(showAvatarUrl);
+    if(fileID !== showAvatarUrl){
+      bufferAvatarUrl = wx.getFileSystemManager().readFileSync(showAvatarUrl)
     }
 
     const data = await wx.cloud.callFunction({
-      name:"update_UserInfo",
-      data:{
+      name: 'update_UserInfo',
+      data: {
         nickName,
         bufferAvatarUrl,
-        userId
+        userId 
       }
-    });
+    })
 
-    wx.hideLoading();
-    wx.navigateBack()
+    id = wx.getStorageSync('openid')
+    
+
+    
+    db.collection("blog").where({ _openid:id }).update({
+      data:{
+        userimg:fileID,
+        username:nickName
+      }
+    }).then(res=>{
+      console.log(res);
+    })
+
+    wx.cloud.callFunction({
+      name:"Update_Blog",
+      data:{
+        id,
+        nickName,
+        fileID
+      }
+    }).then(res=>{
+      
+    })
+
+    wx.cloud.callFunction({
+      name:"Update_reply",
+      data:{
+        id,
+        nickName,
+        fileID
+      }
+    }).then(res=>{
+      console.log(res);
+    })
+
+    
+    wx.hideLoading()
+
+    wx.navigateBack({
+      delta: 1,
+    })
   },
 
-  //修改头像
-  async chooseImg(){
-    const { tempFiles } = await wx.chooseMedia({
-      count:1,
-      mediaType:['image'],
-      sourceType:['album','camera']
-    })
-    console.log(tempFiles[0]);
-    this.setData({
-      showAvatarUrl:tempFiles[0].tempFilePath
-    })
-  },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    const userInfo = wx.getStorageSync('userInfo');
+  onLoad(){
+    const userInfo = wx.getStorageSync('userInfo')
     if(userInfo){
       this.setData({
-        userId:userInfo._id
+        userId: userInfo._id
       })
 
       this.getUserInfo()
     }
-  },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
     
   }
 })

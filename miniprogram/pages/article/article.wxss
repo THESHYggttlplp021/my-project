@@ -1,0 +1,10 @@
+.body{
+  padding:50rpx 30rpx;
+}
+
+.title{
+  font-size: 50rpx;
+  font-weight: 600;
+  margin-bottom: 30rpx;
+}
+

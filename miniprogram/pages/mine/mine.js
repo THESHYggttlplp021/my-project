@@ -4,7 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo:null
+    userInfo:null,
+    record:0
   },
 
   //登陆
@@ -42,7 +43,6 @@ Page({
       this.setData({
         userInfo:userInfo.data
       })
-      console.log(userInfo);
     }
   },
 
@@ -59,6 +59,12 @@ Page({
    */
   onLoad: function (options) {
     const openid = wx.getStorageSync('openid');
+    const error = wx.getStorageSync('error');
+    this.setData({
+      record:error.length
+    })
+    console.log(this.data.record);
+    
     if(!openid){
       wx.cloud.callFunction({
         name:"getOpenId",

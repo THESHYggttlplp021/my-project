@@ -56,7 +56,7 @@
         {
           "name": "pages/detail/detail",
           "pathName": "pages/detail/detail",
-          "query": "id=81f4311c6432203a00012a816fdbb25a",
+          "query": "",
           "launchMode": "default",
           "scene": null
         },
@@ -101,11 +101,67 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "pages/rank/rank",
+          "pathName": "pages/rank/rank",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/fatie/fatie",
+          "pathName": "pages/fatie/fatie",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/daka/daka",
+          "pathName": "pages/daka/daka",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/booksDetail/booksDetail",
+          "pathName": "pages/booksDetail/booksDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/xiantan/xiantan",
+          "pathName": "pages/xiantan/xiantan",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/mianshiti/mianshiti",
+          "pathName": "pages/mianshiti/mianshiti",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/article/article",
+          "pathName": "pages/article/article",
+          "query": "id=405d77f46451d7cc00019e546d91e2a3",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/listdetail/listdetail",
+          "pathName": "pages/listdetail/listdetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
   },
   "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
   "projectname": "%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1",
-  "libVersion": "2.24.7"
+  "libVersion": "2.25.4"
 }
